@@ -1,15 +1,14 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
     defaultConfig {
-        applicationId "br.com.packapps.librarypackappsombr"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -18,6 +17,23 @@ android {
         }
     }
 }
+
+/*
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //repository(url: "file:///C:/gradle/rep/")
+            //repository(url: "file:///home/paulolinhares/Documents")
+            //repository(url: "git@gitlab.com:paulolinhares/library.git")
+
+            pom.groupId = GROUP
+            pom.artifactId = POM_ARTIFACT_ID
+            pom.version = VERSION_NAME
+        }
+    }
+}
+task install(dependsOn: uploadArchives)
+*/
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
