@@ -1,1 +1,1 @@
-Library Packapps for App On Market Br
+Library Packapps for Apps of Supermercado
