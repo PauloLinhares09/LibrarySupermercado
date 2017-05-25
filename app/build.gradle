@@ -18,26 +18,8 @@ android {
     }
 }
 
-/*
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            //repository(url: "file:///C:/gradle/rep/")
-            //repository(url: "file:///home/paulolinhares/Documents")
-            //repository(url: "git@gitlab.com:paulolinhares/library.git")
-
-            pom.groupId = GROUP
-            pom.artifactId = POM_ARTIFACT_ID
-            pom.version = VERSION_NAME
-        }
-    }
-}
-task install(dependsOn: uploadArchives)
-*/
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
