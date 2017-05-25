@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ControllerRetrofit {
-    private static final String URL_BASE = "";
+    private static final String URL_BASE = "http://google.com/";
 
     public static Retrofit initRetrofit(Gson gson){
         Retrofit retrofit = new Retrofit.Builder()
