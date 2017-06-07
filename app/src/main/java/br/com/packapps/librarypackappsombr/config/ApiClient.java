@@ -43,27 +43,19 @@ public class ApiClient {
                 .setPrettyPrinting()
                 .create();
 
-        OkHttpClient client = new OkHttpClient();
-        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-        loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        client.interceptors().add(loggingInterceptor);
         Retrofit retrofit = new Retrofit.Builder()
                 //.client(client)
                 .baseUrl(Constants.BASE_API_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
-
         apiService = retrofit.create(ApiService.class);
-
 
         Retrofit sessionRetrofit = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_API_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 //.client(createRequestInterceptorClient())
                 .build();
-
-
 
         sessionApiService = sessionRetrofit.create(ApiService.class);
     }
@@ -72,33 +64,4 @@ public class ApiClient {
         return apiService;
     }
 
-    public ApiService getSessionApiService() {
-        return sessionApiService;
-    }
-
-    private OkHttpClient createRequestInterceptorClient() {
-        // Set up system-wide CookieHandler to capture all cookies sent from server.
-        final CookieManager cookieManager = new CookieManager();
-        cookieManager.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
-        CookieHandler.setDefault(cookieManager);
-
-        // Set up clientinterceptor to include cookie value in the header.
-        OkHttpClient client = new OkHttpClient();
-        client.interceptors().add(new Interceptor() {
-            @Override
-            public Response intercept(Chain chain) throws IOException {
-                Request original = chain.request();
-
-                // Customize the request
-                Request request = original.newBuilder()
-                        .addHeader(HEADER_API_TOKEN, Constants.TOKEN_PAI)
-                        .build();
-
-                Response response = chain.proceed(request);
-                return response;
-            }
-        });
-
-        return client;
-    }
 }
