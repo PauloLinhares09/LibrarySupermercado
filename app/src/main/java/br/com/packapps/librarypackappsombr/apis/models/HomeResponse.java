@@ -2,11 +2,12 @@ package br.com.packapps.librarypackappsombr.apis.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.vinsol.spree.models.BannerTypes;
-import com.vinsol.spree.utils.Strings;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+
+import br.com.packapps.librarypackappsombr.models.BannerTypes;
+import br.com.packapps.librarypackappsombr.utils.Strings;
 
 /**
  * Created by vaibhav on 11/9/15.

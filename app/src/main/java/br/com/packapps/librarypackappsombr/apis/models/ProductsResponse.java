@@ -2,15 +2,14 @@ package br.com.packapps.librarypackappsombr.apis.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.vinsol.spree.models.Product;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by vaibhav on 9/29/15.
- */
+import br.com.packapps.librarypackappsombr.models.Product;
+
+
 //@Parcel
 public class ProductsResponse implements Serializable {
     private static final long serialVersionUID = 1L;

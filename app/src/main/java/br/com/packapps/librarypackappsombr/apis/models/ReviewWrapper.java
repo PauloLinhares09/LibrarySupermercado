@@ -2,10 +2,11 @@ package br.com.packapps.librarypackappsombr.apis.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.vinsol.spree.models.Review;
 
 
 import java.io.Serializable;
+
+import br.com.packapps.librarypackappsombr.models.Review;
 
 /**
  * Created by vaibhav on 12/24/15.

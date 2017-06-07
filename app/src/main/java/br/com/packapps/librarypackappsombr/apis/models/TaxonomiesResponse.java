@@ -2,13 +2,14 @@ package br.com.packapps.librarypackappsombr.apis.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.vinsol.spree.models.Meta;
-import com.vinsol.spree.models.Taxonomy;
-import com.vinsol.spree.utils.Strings;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.packapps.librarypackappsombr.models.Meta;
+import br.com.packapps.librarypackappsombr.models.Taxonomy;
+import br.com.packapps.librarypackappsombr.utils.Strings;
 
 /**
  * Created by vaibhav on 10/5/15.

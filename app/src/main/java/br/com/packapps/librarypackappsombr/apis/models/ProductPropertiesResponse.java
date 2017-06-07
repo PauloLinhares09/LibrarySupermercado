@@ -2,14 +2,14 @@ package br.com.packapps.librarypackappsombr.apis.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.vinsol.spree.models.ProductProperty;
-import com.vinsol.spree.models.Variant;
 
 //import org.parceler.Parcel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.packapps.librarypackappsombr.models.ProductProperty;
 
 /**
  * Created by vaibhav on 10/5/15.

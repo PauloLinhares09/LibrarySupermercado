@@ -2,11 +2,12 @@ package br.com.packapps.librarypackappsombr.apis.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.vinsol.spree.models.Product;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.packapps.librarypackappsombr.models.Product;
 
 //@Parcel
 public class ProductsByTaxonsResponse implements Serializable {
