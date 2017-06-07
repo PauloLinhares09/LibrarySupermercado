@@ -48,7 +48,7 @@ public class ApiClient {
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         client.interceptors().add(loggingInterceptor);
         Retrofit retrofit = new Retrofit.Builder()
-                .client(client)
+                //.client(client)
                 .baseUrl(Constants.BASE_API_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
@@ -60,7 +60,7 @@ public class ApiClient {
         Retrofit sessionRetrofit = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_API_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(createRequestInterceptorClient())
+                //.client(createRequestInterceptorClient())
                 .build();
 
 
